@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+	<title>My Website</title>
+	<style>
+	body {
+		background: url("file:///Users/Nina/Desktop/Edinburgh/coding_course/bob.jpg");
+		color: white;
+		background-size: 100%600%;
+		background-origin: center;
+		background-repeat: static;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	div.paragraph {
+		color: Skyblue;
+	}
+
+	div.bullshit {
+		width: 100%;
+		height: 30px;
+	}
+
+	ul {
+		margin: 0;
+		padding: 5px;
+		overflow: hidden;
+		background: blue;
+		background-repeat: static;
+
+	}
+
+	li {
+		display: inline;
+		/* elements like headings, paragraphs etc. come in block = stretch the WHOLE WIDTH of the page + have LINE BREAKS before and after. 
+		On the other hand, links like the a tag and other things display "inline" therefore exist withitn the normal flow of the text they're contained within, with NO LINE BREAKS + NO taking up the WHOLE WIDTH of page */
+		float: left;
+		padding: 5px 150px 0px 150px;
+		/* when there is just one valye for padding, then you are telling the browser to add that value on ALL sides of the elment. Sometimes you want to control each side. Hence:
+		padding: top right bottom left */
+
+		/*Difference b/w padding and margin
+		padding: creates space on the inside of an element
+		maring: creates space on the outside of an elmeent
+		*/
+	}
+
+	article {
+		max-width: 500px;
+			/* article elements can be smaller than 500px but not larger*/
+		padding: 20px;
+		margin; 0 auto;
+		/* sets margin 0 top and bottom and same on left and right*/
+	}
+
+	@media (max-width: 500px) {
+		body {
+			background: Skyblue;
+		}
+		h1 {
+			font-size: 36px;
+		}
+
+		li {
+			display: block;
+			padding: 5px;
+		}
+	}
+
+	 /* the media query allows to set CSS styles that only activate when the browser is a certain width - in this case smaller than 500px*/
+
+
+	</style>
+
+
+	<body>
+
+	
+
+	<div class='main'>
+		<h1 style="color:black; text-decoration: underline">Hello!</h1>
+		
+
+		<!-- careful: all the tags have to be closed in ORDER otherwise does not work-->
+
+	</div>
+
+   <div class='bullshit'>
+		<span class='list'><ul>
+			<li>HOME</li>
+			<li>ABOUT</li>
+			<li>PORTFOLIO</li>
+		</ul></span>
+
+
+	</div>
+
+	<article>
+		<div class='paragraph'><p><strong> HELLO CICCI </strong></p>
+			<button>Like my cicci</button>
+
+   </div>
+   </article>
+
+
+
+   <script>
+   	/* inserts Javascritpt */
+
+   	$("button").on("click", function(){
+   		alert("A button was clicked")
+   		$(this).toggleClass('active');
+   	});
+
+   	.active{background-color: red;}
+
+   	/* $ = elements we want to select
+   	/* .on() = sets up an event listener. Inside the parenthesis = paramenters/arguments
+   	/* $(element).on(event-type, thing-to-be-done)  */ 
+
+   </script>
+
+	</body>
+	
+</head>
